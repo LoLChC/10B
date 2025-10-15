@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10B - Sınıf Arkadaşlarım</title>
+    <link rel="stylesheet" href="{% static "css/index.css" %}">
+</head>
+<body>
+    <header class="header">
+        <h1>10B SINIFI 🌟</h1>
+        <p class="subtitle">Sağlık Meslek Lisesi - 2025</p>
+    </header>
+
+    <main class="grid">
+        {% comment %} <a href="" class="card" style="--card-color:#7dd3fc;">
+            <img src="{% static 'images/merve.jpg' %}" alt="Merve">
+            <h2>Merve</h2>
+            <p>Filalog</p>
+        </a> {% endcomment %}
+
+        <a href="" class="card" style="--card-color:#ffb6c1;">
+            <img src="{% static 'images/sevval.jpg' %}" alt="Berkay">
+            <h2>Şevval</h2>
+            <p>Mutant Avcısı</p>
+        </a>
+
+        {% comment %} <a href="" class="card" style="--card-color:#a7f3d0;">
+            <img src="{% static 'images/elif.jpg' %}" alt="Elif">
+            <h2>Elif</h2>
+            <p>Sporcu Temalı 🏃‍♀️</p>
+        </a> {% endcomment %}
+
+        {% comment %} <a href="" class="card" style="--card-color:#fde68a;">
+            <img src="{% static 'images/cagatayhan.jpg' %}" alt="Çağatayhan">
+            <h2>Çağatayhan</h2>
+            <p>Motor Tutkunu 🏍️</p>
+        </a> {% endcomment %}
+    </main>
+    <footer>
+        <p>© 2025 10B Sınıfı | Sağlık Meslek Lisesi</p>
+    </footer>
+</body>
+</html>
