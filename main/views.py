@@ -38,3 +38,7 @@ def merve(request):
 def nisa_tofas(request):
     log_visitor(request)
     return render(request, 'nisa-tofas.html')
+
+def beyza(request):
+    log_visitor(request)
+    return render(request, 'beyza.html')
