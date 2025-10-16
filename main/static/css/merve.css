@@ -1,6 +1,8 @@
 /* GENEL STİL */
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -69,29 +71,6 @@ body {
     animation: float 3.5s ease-in-out infinite;
 }
 
-/* FİL KULAKLARINI BULUT GİBİ YUMUŞAK YAP */
-.elephant-ears {
-    position: absolute;
-    width: 70px;
-    height: 100px;
-    background: radial-gradient(circle, #A06CD5, #4B3F72);
-    border-radius: 50%;
-    top: 60px;
-    z-index: -1;
-    opacity: 0.7;
-    filter: blur(1px);
-}
-
-.ear-left {
-    left: -35px;
-    transform: rotate(-25deg);
-}
-
-.ear-right {
-    right: -35px;
-    transform: rotate(25deg);
-}
-
 /* ÖZELLİKLER */
 .features {
     display: grid;
@@ -114,20 +93,69 @@ body {
     box-shadow: 0 0 20px #A06CD5;
 }
 
-/* FİL ÖZELLİKLERİ */
-.elephant-facts {
-    background: rgba(20, 10, 40, 0.9);
-    color: #E0E0E0;
-    padding: 30px 20px;
+/* MERVEMSI HAREKETLER */
+.merve-facts {
+    background: linear-gradient(145deg, #3C096C, #6A0DAD, #9B59B6);
+    border: 3px dashed #E0BBFF;
     border-radius: 25px;
-    margin: 30px 0;
-    border: 2px dashed #CDB4DB;
-    box-shadow: inset 0 0 30px rgba(173,143,240,0.2);
+    padding: 25px 20px;
+    box-shadow: 0 0 25px rgba(173, 143, 240, 0.6);
+    margin: 40px 0;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.elephant-facts h2 {
-    color: #E0BBFF;
-    text-shadow: 0 0 10px #A06CD5;
+.merve-facts:hover {
+    transform: translateY(-6px) rotate(-1deg);
+    box-shadow: 0 0 35px rgba(173, 143, 240, 0.8);
+}
+
+.merve-facts h2 {
+    color: #FFD6FF;
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    margin-bottom: 20px;
+    text-shadow: 0 0 12px #CDB4DB, 0 0 25px #A06CD5;
+}
+
+.merve-facts ul {
+    list-style: none;
+    padding: 0;
+}
+
+.merve-facts ul li {
+    font-weight: bold;
+    color: #F6E6FF;
+    text-shadow: 0 0 5px #A06CD5, 0 0 10px #CDB4DB;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    padding: 12px 10px;
+    border-radius: 12px;
+    margin: 8px 0;
+    background: rgba(255, 255, 255, 0.05);
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.merve-facts ul li:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(6px);
+    box-shadow: 0 0 15px #CDB4DB;
+}
+
+/* UYKUCU DETAYLAR */
+.warning-text {
+    color: #CDB4DB;
+    font-style: italic;
+    text-shadow: 0 0 12px #A06CD5;
+    font-size: clamp(1rem, 3vw, 1.3rem);
+}
+
+/* FOOTER */
+.footer {
+    background: linear-gradient(180deg, #1B263B, #0D1B2A);
+    color: #CDB4DB;
+    text-align: center;
+    padding: 25px 15px;
+    border-top: 4px solid #A06CD5;
+    box-shadow: 0 -5px 20px rgba(173,143,240,0.4);
 }
 
 /* ANİMASYONLAR */
@@ -141,59 +169,10 @@ body {
     50% { transform: translateY(-10px); }
 }
 
-@keyframes starTwinkle {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.4; }
-}
-
-/* YILDIZLAR ARKA PLANI */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: radial-gradient(white, transparent 70%) repeat;
-    background-size: 2px 2px;
-    opacity: 0.15;
-    animation: starTwinkle 4s infinite ease-in-out alternate;
-    z-index: -1;
-}
-
-/* UYKUCU DETAYLAR */
-.warning-text {
-    color: #CDB4DB;
-    font-style: italic;
-    text-shadow: 0 0 12px #A06CD5;
-    font-size: clamp(1rem, 3vw, 1.3rem);
-}
-
-.heavy-text {
-    color: #CDB4DB;
-    text-shadow: 0 0 8px #6F2DBD;
-    font-weight: bold;
-}
-
-/* FOOTER */
-.footer {
-    background: linear-gradient(180deg, #1B263B, #0D1B2A);
-    color: #CDB4DB;
-    text-align: center;
-    padding: 25px 15px;
-    border-top: 4px solid #A06CD5;
-    box-shadow: 0 -5px 20px rgba(173,143,240,0.4);
-}
-
-.elephant-icon {
-    font-size: 2.5em;
-    animation: float 3s ease-in-out infinite;
-}
-
-/* RESPONSIVE İYİLEŞTİRMELER */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-    .feature-box {
+    .feature-box, .merve-facts {
         border-radius: 15px;
-    }
-    .hero-section {
-        padding: 20px 10px;
+        padding: 15px;
     }
 }
