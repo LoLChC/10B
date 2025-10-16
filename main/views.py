@@ -31,7 +31,10 @@ def sevval(request):
     log_visitor(request)
     return render(request, 'sevval.html')
 
-
 def merve(request):
     log_visitor(request)
     return render(request, 'merve.html')
+
+def nisa_tofas(request):
+    log_visitor(request)
+    return render(request, 'nisa-tofas.html')

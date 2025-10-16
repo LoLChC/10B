@@ -1,0 +1,176 @@
+/* GENEL STİL */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Russo One', Arial, sans-serif;
+  background: linear-gradient(135deg, #1a0000, #400000, #990000);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.6;
+  text-shadow: 0 0 2px #000;
+}
+
+/* HEADER */
+.header {
+  background: #000;
+  border-bottom: 5px solid #ff0000;
+  text-align: center;
+  padding: clamp(20px, 6vw, 40px) 10px;
+  box-shadow: 0 0 25px #ff0000;
+}
+.title {
+  color: #ff1a1a;
+  font-size: clamp(2rem, 7vw, 4.5rem);
+  text-shadow: 0 0 10px #ff0000, 0 0 25px #ff3333;
+  animation: blink 1s infinite alternate;
+}
+.subtitle {
+  color: #ccc;
+  font-size: clamp(1rem, 3vw, 1.4rem);
+  margin-top: 8px;
+  text-shadow: 0 0 5px #ff3333;
+}
+
+/* ANA CONTAINER */
+.container {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(20px, 5vw, 40px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 5vw, 40px);
+}
+
+/* HERO */
+.hero-section {
+  background: rgba(10, 0, 0, 0.8);
+  border: 3px solid #ff0000;
+  border-radius: 25px;
+  box-shadow: 0 0 30px #ff0000;
+  text-align: center;
+  padding: clamp(20px, 5vw, 40px);
+}
+.profile-img {
+  width: clamp(150px, 40vw, 250px);
+  height: clamp(150px, 40vw, 250px);
+  object-fit: cover;
+  border-radius: 50%;
+  border: 8px solid #ff1a1a;
+  animation: bounce 2s infinite ease-in-out;
+}
+.hero-section h2 {
+  color: #ff3333;
+  font-size: clamp(1.4rem, 5vw, 2.4rem);
+  margin-top: 20px;
+}
+.warning-text {
+  color: #ff4d4d;
+  font-size: clamp(1rem, 3.5vw, 1.3rem);
+  font-weight: bold;
+  text-shadow: 0 0 10px #ff0000;
+  margin-top: 10px;
+}
+
+/* FEATURE GRID */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: clamp(15px, 4vw, 25px);
+}
+.feature-box {
+  background: linear-gradient(45deg, #4d0000, #ff0000);
+  border-radius: 15px;
+  border: 3px solid #ff4d4d;
+  box-shadow: 0 0 30px #ff1a1a;
+  padding: clamp(15px, 5vw, 25px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+.feature-box:hover {
+  transform: translateY(-6px) rotate(-1deg);
+  box-shadow: 0 0 40px #ff3333;
+}
+.feature-box h3 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: clamp(1.1rem, 3.5vw, 1.5rem);
+  text-transform: uppercase;
+}
+.feature-box p {
+  font-size: clamp(0.9rem, 3vw, 1.1rem);
+  color: #f5f5f5;
+}
+
+/* NİSA FACTS */
+.nisa-facts {
+  background: #200000;
+  border: 2px dashed #ff1a1a;
+  border-radius: 20px;
+  box-shadow: 0 0 25px #ff0000;
+  padding: clamp(15px, 5vw, 30px);
+}
+.nisa-facts h2 {
+  text-align: center;
+  color: #ff4d4d;
+  font-size: clamp(1.4rem, 4.5vw, 2.1rem);
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px #ff0000;
+}
+.heavy-text {
+  font-weight: bold;
+  color: #ff3333;
+  text-shadow: 0 0 5px #990000;
+  font-size: clamp(0.95rem, 3.5vw, 1.1rem);
+  margin: 10px 0;
+  word-wrap: break-word;
+  letter-spacing: 0.5px;
+}
+
+/* FOOTER */
+.footer {
+  background: #000;
+  text-align: center;
+  padding: clamp(15px, 4vw, 25px);
+  color: #ff4d4d;
+  border-top: 4px solid #800000;
+  box-shadow: 0 -5px 20px #ff0000;
+}
+.footer-icon {
+  font-size: clamp(1.6rem, 5vw, 2rem);
+  animation: blink 1s infinite alternate;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+/* ANİMASYONLAR */
+@keyframes blink {
+  from { opacity: 1; text-shadow: 0 0 10px #ff0000; }
+  to { opacity: 0.7; text-shadow: 0 0 30px #ff0000; }
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .title { font-size: 1.8rem; }
+  .hero-section { padding: 20px 10px; }
+  .features { grid-template-columns: 1fr; }
+  .feature-box { padding: 18px; }
+  .nisa-facts ul { padding-left: 15px; }
+}
